@@ -3,36 +3,97 @@
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: blue;
+  padding: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-intro {
+  font-size: large;
 }
 
+.Game {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 3px;
+    display: inline-block;
+    color: #FFF;
+    font-size: 12pt;
+    padding: 7px 28px;
+    text-decoration: none;
+    margin: 5px;
+    transition: all 0.5s;
+    max-width: 160px;
+    min-width: 160px;
+}
+
+button:hover {
+    background-color: white;
+    font-size: 14pt;
+}
+
+.Board {
+  display: flex;
+}
+
+.Slat {
+
+}
+
+.Hole {
+  padding: 5px;
+  min-width: 40px;
+  min-height: 40px;
+  border: 8px solid blue;
+  
+}
+
+.Hole div {
+  position: relative;
+  min-width: 80px;
+  min-height: 80px;
+  border-radius: 60px;
+  top: -400px;
+  transition: transform 0.5s;
+}
+
+.Red {
+  background-color: red;
+  transform: translateY(400px);
+  
+}
+
+.Yellow {
+  background-color: yellow;
+  transform: translateY(400px);
+}
+
+.winnerMessage {
+  margin: 20px;
+  font-size: 0pt;
+  font: 12pt;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.18, 0.99, 0.8, 1.17);
+}
+
+.appear {
+  opacity: 1;
+  font-size: 20pt;
+}
+
+
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
